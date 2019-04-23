@@ -1,15 +1,15 @@
 # config_i3
-config for i3, i3status and compton
+<h2>config for i3, i3status and compton</h2>
 
-apps to install:
-  sudo apt-get install xfce4appfinder
-  sudo apt-get install kazam
-  sudo apt-get install ranger
-  sudo apt-get install telegram-desktop
-  sudo apt-get install pcmanfm
-  sudo apt-get install sublime-text
+<h5>apps to install:</h5>
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install xfce4appfinder<br />
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install kazam<br />
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install ranger<br />
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install telegram-desktop<br />
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install pcmanfm<br />
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install sublime-text<br />
 
-en-uk layouts:
+<h5>en-uk layouts:</h5>
     
 	
   
