@@ -10,6 +10,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install sublime-text<br />
 
 <h5>en-uk layouts:</h5>
-    
-	
+e&nbsp;&nbsp;&nbsp;&nbsp;xec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:alt_shift_toggle"
+
+<h5>touchpad config</h5>
+&nbsp;&nbsp;&nbsp;&nbsp;put libinput config in /etc/X11/xorg.conf.d/   
   
