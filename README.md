@@ -1,14 +1,25 @@
 # config_i3
-<h2>config for i3, i3status and compton</h2>
-<h4>apps to install:</h4>
-&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install xfce4appfinder<br />
-&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install kazam<br />
-&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install ranger<br />
-&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install telegram-desktop<br />
-&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install pcmanfm<br />
-&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install sublime-text<br />
-<h4>en-uk layouts:</h4>
-&nbsp;&nbsp;&nbsp;&nbsp;exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:alt_shift_toggle"
-<h4>touchpad config:</h4>
-&nbsp;&nbsp;&nbsp;&nbsp;put libinput config in /etc/X11/xorg.conf.d  
-  
+
+### Config for i3, i3status and compton
+### Packages to install:
+
+	sudo pacman -S ttf-hack 
+	sudo pacman -S terminus-font 
+	sudo pacman -S noto-fonts 
+	sudo pacman -S noto-fonts-extra
+	sudo pacman -S ranger
+	sudo pacman -S feh
+	sudo pacman -S variety
+	sudo pacman -S alacritty
+	sudo pacman -S python-pip
+	sudo pacman -S rofi
+	sudo pacman -S telegram-desktop
+	sudo pacman -S firefox
+
+### en-uk layouts:
+
+	exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:alt_shift_toggle"
+
+### Touchpad and intel graphics cfgs:
+
+put 20-intel.conf and 90-touchpad.cond config in /etc/X11/xorg.conf.d  
