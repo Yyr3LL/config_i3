@@ -153,6 +153,35 @@ or
 	sudo pacman -S lightdm lightdm-gtk-greeter
 	sudo systemctl enable lightdm.service
 
+### Installing yaourt (yogurt)
+
+#### Using AUR
+
+	sudo pacman -S --needed base-devel git wget yajl
+	cd /tmp
+	git clone https://aur.archlinux.org/package-query.git
+	cd package-query/
+	makepkg -si && cd /tmp/
+	git clone https://aur.archlinux.org/yaourt.git
+	cd yaourt/
+	makepkg -si
+
+#### Using custom repo
+
+Edit this file
+
+	sudo vim /etc/pacman.conf
+
+And add this to the end of file
+
+	[archlinuxfr]
+	SigLevel = Never
+	Server = http://repo.archlinux.fr/$arch
+
+Then install this via pacman
+
+	sudo pacman -Sy yaourt
+
 ## Now enjoy using arch 8-)
 
 ### Source: https://youtu.be/4PBqpX0_UOc
