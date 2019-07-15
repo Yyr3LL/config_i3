@@ -19,7 +19,3 @@
 ### en-uk layouts:
 
 	exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:alt_shift_toggle"
-
-### Touchpad and intel graphics cfgs:
-
-put 20-intel.conf and 90-touchpad.cond config in /etc/X11/xorg.conf.d  
