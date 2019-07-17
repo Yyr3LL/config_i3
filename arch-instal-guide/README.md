@@ -59,8 +59,8 @@ Make home and boot directories
 
 And mount them
 
-	mount /dev/sdxn/home /mnt/home  
-	mount /dev/sdxn/boot /mnt/boot  
+	mount /dev/sdxn/ /mnt/home  
+	mount /dev/sdxn/ /mnt/boot  
 
 ### Actually installing arch
 
@@ -77,7 +77,9 @@ And mount them
 ### Installing and enabling networkmanager
 
 	pacman -S networkmanager
+
 And make it run at startup
+
 	systemctl enable NetworkManager 
 
 ### Setting up grub
