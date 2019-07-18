@@ -91,8 +91,8 @@ bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym mod1+space exec --no-startup-id rofi -show run -font "Noto Sans 13"
 bindsym Print exec flameshot full -c
-bindsym $mod+Print --release exec flameshot gui 
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+p --release exec flameshot gui 
+#bindsym $mod+Shift+p --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -191,6 +191,33 @@ set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
+set $ws9 9
+set $ws10 10 
+
+
+
+#set $firstMonitor LVDS1
+#set $secondMonitor LVDS1
+
+#set $firstMonitor DVI-I-2
+#set $secondMonitor VGA-0
+
+#set $firstMonitor DVI-I-2
+#set $secondMonitor DVI-I-3
+
+#set $firstMonitor DVI-0
+#set $secondMonitor DVI-1
+
+workspace $ws1 output $firstMonitor
+workspace $ws2 output $firstMonitor
+workspace $ws3 output $firstMonitor
+workspace $ws4 output $firstMonitor
+workspace $ws5 output $firstMonitor
+workspace $ws6 output $secondMonitor
+workspace $ws7 output $secondMonitor
+workspace $ws8 output $secondMonitor
+workspace $ws9 output $secondMonitor
+workspace $ws10 output $secondMonitor
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -201,6 +228,8 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+10 workspace $ws10
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -211,6 +240,8 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
+bindsym $mod+Ctrl+10 move container to workspace $ws10
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -221,6 +252,8 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws8; workspace $ws9
+bindsym $mod+Shift+10 move container to workspace $ws8; workspace $ws10
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
@@ -331,14 +364,15 @@ bindsym $mod+l exec --no-startup-id blurlock
 
 # Autostart applications
 #exec --no-startup-id /home/yy/.config/polybar/launchr.sh
-
+exec --no-startup-id feh --bg-fill ~/wallpapers/adventure-climb-conifer-640781.jpg
 exec --no-startup-id polybar example
 #exec --no-startup-id variety
-#exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
+exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id xset m 22/10 0
+#exec --no-startup-id compton
 exec --no-startup-id nm-applet
 exec --no-startup-id xrdb .Xresources
 exec --no-startup-id flameshot
